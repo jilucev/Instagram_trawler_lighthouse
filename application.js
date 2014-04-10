@@ -10,7 +10,7 @@ $(function(){
         console.log(data);
           for(i= 0; i < data.data.length; i++) {
             var lighthouse = data.data[i];
-            $('<img src=" ' + lighthouse.images.low_resolution.url + ' "/> ').appendTo($('body'));
+            $('<img src=" ' + lighthouse.images.low_resolution.url + ' " class="image"/> ').hide().appendTo($('body')).fadeIn(i * 600);
           }
 
         },
