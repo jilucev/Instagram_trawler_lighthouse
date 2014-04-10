@@ -1,6 +1,7 @@
 $(function(){
 
   $('#magic-button').on('click', loadLighthouses);
+  $('#spring-cleaning').on('click', clearLighthouses);
 
   function loadLighthouses() {
     var url = "https://api.instagram.com/v1/tags/lighthouse/media/recent?client_id=8016d14255074769a95cf9212ada71a1&callback=?";
@@ -19,6 +20,12 @@ $(function(){
         }
     });
   }
+
+  
+  function clearLighthouses() {
+    $('.image').fadeOut(i * 300);
+  }
+
 
 });
 
